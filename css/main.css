@@ -259,6 +259,7 @@ body {
 .footer {
     display: flex;
     align-items: center;
+    background: #FEFEFE;
     justify-content: space-between;
     padding: 0.5em 1em;
 }
