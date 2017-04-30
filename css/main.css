@@ -99,6 +99,14 @@ textarea {
 body {
     background: #f3f3f3;
     color: #343838;
+    font-family: 'EB Garamond', serif;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em;
+}
+p {
+    font-size: 1.3em;
 }
 
 /*
@@ -110,6 +118,7 @@ body {
 }
     .topbar_branding {
         float: right;
+        font-family: 'Dancing Script', cursive;
         font-size: 2em;
         padding: 0.3em 3em;
     }
@@ -186,22 +195,21 @@ body {
 .pricing {
     display: flex;
     align-items: stretch;
-    justify-content: space-around;
-    margin-top: 5em;    
+    justify-content: space-around;  
 }
     .panel {
-        flex: 0 1 20%;
         background: #343838;
         border-left: 1.5em solid #00B4CC;
-        border-radius: 4px;
         color: #FEFEFE;
-        padding: 2em 1em;
+        padding: 5em 1em 10em;
     }
         .panel_title {
+            font-family: 'Dancing Script', cursive;
             font-size: 1.5em;
             font-weight: bold;
         }
         .panel_list {
+            font-size: 1.2em;
             list-style: none;
             padding: 0;
         }
@@ -221,7 +229,6 @@ body {
     display: flex;
     justify-content: space-between;
     border-left: 15vw solid #343838;
-    margin-top: 5em;
 }
     .contact_form {
         flex: 0 1 40%;
