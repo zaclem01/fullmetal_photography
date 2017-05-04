@@ -95,7 +95,9 @@ textarea {
 /* ==========================================================================
    Main styles
    ========================================================================== */
-
+* {
+    box-sizing: border-box;
+}
 body {
     background: #f3f3f3;
     color: #343838;
@@ -114,13 +116,20 @@ p {
  */
 
 .topbar {
+    display: flex;
+    justify-content: space-between;
     background: #FEFEFE;
+    padding: 0.3em 3em 0.3em 1em;
 }
+    .topbar_menuIcon {
+        display: none;
+        cursor: pointer;
+        font-size: 2em;
+    }
     .topbar_branding {
         float: right;
         font-family: 'Dancing Script', cursive;
         font-size: 2em;
-        padding: 0.3em 3em;
     }
 
 .banner {
@@ -136,7 +145,7 @@ p {
     display: flex;
     position: relative;
     background: #343838; 
-    box-shadow: 0 0 5px #0a0a0a;
+    /*box-shadow: 0 0 5px #0a0a0a;*/
     color: #FEFEFE;
     height: 6em;
     justify-content: space-around;
@@ -147,8 +156,8 @@ p {
 .navigationBar--fixed {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    margin: 0;
+    width: 100%;
 }
     .navigationBar_logo {
         display: inline-block;
@@ -194,14 +203,16 @@ p {
 
 .pricing {
     display: flex;
-    align-items: stretch;
-    justify-content: space-around;  
+    align-items: stretch; 
+    justify-content: space-between;
+    padding: 2em 0;
 }
     .panel {
+        flex: 0 1 24.5%;
         background: #343838;
-        border-left: 1.5em solid #00B4CC;
+        border-left: 0.5em solid #00B4CC;
         color: #FEFEFE;
-        padding: 5em 1em 10em;
+        padding: 5em 1em;
     }
         .panel_title {
             font-family: 'Dancing Script', cursive;
@@ -228,10 +239,16 @@ p {
 .contact {
     display: flex;
     justify-content: space-between;
-    border-left: 15vw solid #343838;
+    background: #00B4CC;
+    overflow: hidden;
 }
     .contact_form {
-        flex: 0 1 40%;
+        position: relative;
+        top: 1.5em;
+        flex: 0 1 47%;
+        background: #FEFEFE;
+        /*box-shadow: 0px -3px 10px #777;*/
+        margin-left: 15vh;
         padding: 3em 4em 2em;
     }
         .contact_form_label {
@@ -346,20 +363,78 @@ p {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Medium Screen Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1024px) {
+    .topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+        .topbar_menuIcon {
+            display: inline-block;
+        }
+    
+    .navigationBar {
+        display: none;
+        flex-flow: column;
+        position: fixed;
+        top: 3.4em;
+        box-shadow: none;
+        height: auto;
+        margin: 0;
+        width: 100%;
+    }
+        .navigationBar_logo {
+            display: none;
+        }
+        .navigationBar_navLink {
+            margin: 0 auto;
+        }
+
+    .about {
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    .miniGallery_image {
+        flex-basis: 50%;
+    }
+
+    .pricing {
+        flex-wrap: wrap;
+    }
+    .panel {
+        flex-basis: 49%;
+        margin-top: 1em;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+        .contact_form {
+            flex-basis: 90%;
+            margin-left: 0;
+        }
+        .contact_description {
+            flex-basis: 90%;
+        }
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media only screen and (max-width: 720px) {
+    body {
+        font-size: 14px;
+    }
+    .miniGallery_image {
+        flex-basis: 100%;
+    }
+    .panel {
+        flex-basis: 100%;
+        margin-top: 1em;
+    }
 }
 
 /* ==========================================================================

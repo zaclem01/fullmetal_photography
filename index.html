@@ -21,12 +21,14 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="topbar clearfix">
-        <div class="topbar_menuIcon"></div>
-        <div class="topbar_message"></div>
-        <div class="topbar_branding">
+    <div class="topbar">
+        <span class="topbar_menuIcon">
+            <i class="fa fa-bars"></i>
+        </span>
+        <span class="topbar_message"></span>
+        <span class="topbar_branding">
             Fullmetal Photography
-        </div>
+        </span>
     </div>
 
     <div class="banner"></div>
@@ -36,27 +38,48 @@
             <img src="img/FMP_logo.png" />
         </div>
         <div class="navigationBar_navLink">
-            <a href="#">About</a>
+            <a href="#about">About</a>
         </div>
         <div class="navigationBar_navLink">
             <a href="#">Packages</a>
         </div>
         <div class="navigationBar_navLink">
-            <a href="#">Client Albums</a>
+            <a href="https://louisvillefullmetalphotography.pixieset.com/" target="_blank">Client Albums</a>
         </div>
         <div class="navigationBar_navLink">
-            <a href="#">Schedule a Shoot</a>
+            <a id="Setmore_button_iframe" href="https://my.setmore.com/bookingpage/991c5eed-9e11-4704-9a9b-3b5305b09cb1">Schedule a Shoot</a>
         </div>
         <div class="navigationBar_navLink">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section class="about">
+    <section id="about" class="about">
         <h1 class="about_header">Who are we?</h1>
         <p>Eu consectetur aute velit fugiat veniam qui aliqua ad et enim fugiat proident. Consequat voluptate aliqua incididunt est. Cillum laboris sit sint veniam excepteur. Dolor deserunt in qui sunt reprehenderit deserunt pariatur dolor consectetur id. Non minim consequat do anim ex culpa. Consectetur dolor mollit velit ea et eiusmod non labore est adipisicing. Ex excepteur anim reprehenderit fugiat labore ea laborum veniam nisi anim aliquip.</p>
         <h1 class="about_header">What do we offer?</h1>
         <p>Eu consectetur aute velit fugiat veniam qui aliqua ad et enim fugiat proident. Consequat voluptate aliqua incididunt est. Cillum laboris sit sint veniam excepteur. Dolor deserunt in qui sunt reprehenderit deserunt pariatur dolor consectetur id. Non minim consequat do anim ex culpa. Consectetur dolor mollit velit ea et eiusmod non labore est adipisicing. Ex excepteur anim reprehenderit fugiat labore ea laborum veniam nisi anim aliquip.</p>
+    </section>
+
+    <section class="miniGallery">
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
+        <div class="miniGallery_image">
+            <img src="http://placehold.it/300x150" />
+        </div>
     </section>
 
     <section class="pricing">
@@ -99,28 +122,7 @@
         </div>
     </section>
 
-    <section class="miniGallery">
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-        <div class="miniGallery_image">
-            <img src="http://placehold.it/300x150" />
-        </div>
-    </section>
-
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact_form">
             <label class="contact_form_label" for="name">What's your Name?</label>
             <input class="contact_form_input contact_form_input--info" type="text" name="name"/>
@@ -154,6 +156,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/js/iframe/setmore_iframe.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
