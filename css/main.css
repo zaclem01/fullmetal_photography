@@ -105,6 +105,10 @@ body {
 }
 h1 {
     font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
     font-size: 2.2em;
 }
 p {
@@ -153,6 +157,7 @@ p {
     margin: 0 10%;
     top: -3em;
     width: 80%;
+    z-index: 2
 }
 .navigationBar--fixed {
     position: fixed;
@@ -189,6 +194,9 @@ p {
     margin-top: -6em;
     padding: 5em 15vw 5em 2em;
 }
+    .about h1 {
+        text-align: center;
+    }
 
 .miniGallery {
     display: flex;
@@ -206,14 +214,15 @@ p {
     display: flex;
     align-items: stretch; 
     justify-content: space-between;
-    padding: 2em 0;
+    padding: 4em 0;
 }
     .panel {
+        position: relative;
         flex: 0 1 24.5%;
-        background: #343838;
-        border-left: 0.5em solid #00B4CC;
-        color: #FEFEFE;
-        padding: 5em 1em;
+        /*background: #343838;*/
+        border-left: 0.2em solid #00B4CC;
+        /*color: #FEFEFE;*/
+        padding: 2em 1em 7em;
     }
         .panel_title {
             font-family: 'Dancing Script', cursive;
@@ -288,6 +297,30 @@ p {
     justify-content: space-between;
     padding: 0.5em 1em;
 }
+
+.ctaBtn {
+    border: none;
+    color: #FEFEFE;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+}
+    .ctaBtn--panel {
+        position: absolute;
+        bottom: 1em;
+        right: 2em;
+        background: #00B4CC;
+    }
+        .ctaBtn--panel i[class^="fa fa-"] {
+            margin-left: 0.5em;
+        }
+    .ctaBtn--about {
+        background: #343838;
+        float: right;
+        font-size: 1.5em;
+    }
+        .ctaBtn--about i[class^="fa fa-"] {
+            margin-right: 0.5em;
+        }
 
 /* ==========================================================================
    Helper classes
