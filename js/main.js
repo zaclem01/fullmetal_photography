@@ -28,7 +28,7 @@ $(document).ready(function() {
         $navbar.css('display', 'flex');
     });
 
-    $('.navigationBar_navLink, body').on('click', function(e) {
+    $('.navigationBar_navLink').on('click', function(e) {
         e.stopPropagation();
         var width = $(window).width();
         var smallRes = width <= 1007;
@@ -44,6 +44,15 @@ $(document).ready(function() {
             $('html, body').animate({
                 scrollTop: $(section).offset().top
             });
+        }
+    });
+
+    $('body').on('click', function(e) {
+        var width = $(window).width();
+        var smallRes = width <= 1007;
+
+        if (smallRes) {
+            $navbar.css('display', 'none');
         }
     });
 
