@@ -145,12 +145,34 @@ p {
     background-size: cover;
     height: 80vh;
 }
+    .banner_overlay {
+        position: relative;
+        color: #FEFEFE;
+        height: 100%;
+        width: 100%;
+    }
+        .banner_overlay_bg {
+            background: #0a0a0a;
+            height: 100%;
+            opacity: 0.9;
+            width: 100%;
+        }
+        .banner_overlay_img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            text-align: center;
+        }
 
 .navigationBar {
     display: flex;
     position: relative;
     background: #343838; 
     /*box-shadow: 0 0 5px #0a0a0a;*/
+    border-radius: 2px;
     color: #FEFEFE;
     height: 6em;
     justify-content: space-around;
@@ -192,7 +214,7 @@ p {
 .about {
     border-left: 15vw solid #00B4CC;
     margin-top: -6em;
-    padding: 5em 15vw 5em 2em;
+    padding: 5em 15vw 7em 2em;
 }
     .about h1 {
         text-align: center;
@@ -240,7 +262,7 @@ p {
             }
             .panel_list li:before {
                 content: "\f030";
-                color: #00B4CC;
+                color: #343838;
                 display: inline-block;
                 font-family: FontAwesome;
                 margin-right: 0.5em;
@@ -258,6 +280,7 @@ p {
         flex: 0 1 47%;
         background: #FEFEFE;
         /*box-shadow: 0px -3px 10px #777;*/
+        border-radius: 2px;
         margin-left: 15vh;
         padding: 3em 4em 2em;
     }
@@ -300,6 +323,7 @@ p {
 
 .ctaBtn {
     border: none;
+    border-radius: 2px;
     color: #FEFEFE;
     font-size: 1.1em;
     padding: 0.5em 1em;
@@ -317,6 +341,7 @@ p {
         background: #343838;
         float: right;
         font-size: 1.5em;
+        margin-top: 1em;
     }
         .ctaBtn--about i[class^="fa fa-"] {
             margin-right: 0.5em;

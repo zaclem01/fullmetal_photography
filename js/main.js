@@ -28,12 +28,31 @@ $(document).ready(function() {
         $navbar.css('display', 'flex');
     });
 
-    $('.navigationBar_navLink, body').on('click', function() {
+    $('.navigationBar_navLink, body').on('click', function(e) {
+        e.stopPropagation();
         var width = $(window).width();
         var smallRes = width <= 1007;
 
         if (smallRes) {
             $navbar.css('display', 'none');
         }
+
+        var section = $(this).find('a').attr('href');
+        console.log(section);
+        if (section == '#about' || section == '#packages' || section == '#contact') {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(section).offset().top
+            });
+        }
     });
+
+    $('.ctaBtn--about').on('click', function() {
+        $('#Setmore_button_iframe').click();
+    });
+
+    setTimeout(function() {
+        $('.banner_overlay').removeClass('fadeInLeft');
+        $('.banner_overlay').addClass('fadeOutRight');
+    }, 2000)
 });
