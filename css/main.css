@@ -102,6 +102,7 @@ body {
     background: #f3f3f3;
     color: #343838;
     font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
 }
 h1 {
     font-family: 'Dancing Script', cursive;
@@ -235,23 +236,41 @@ p {
         }
 
 .pricing {
-    display: flex;
-    align-items: stretch; 
-    justify-content: space-between;
-    padding: 4em 0;
+    padding: 2em 0 4em;
 }
+    .pricing_title {
+        display: inline-block;
+        background: #343838;
+        color: #FEFEFE;
+        font-family: 'Dancing Script', cursive;
+        font-size: 4em;
+        padding: 0 0.25em;
+    }
+    .panel_wrapper {
+        display: flex;
+        align-items: stretch; 
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     .panel {
         position: relative;
         flex: 0 1 24.5%;
-        /*background: #343838;*/
         border-left: 0.2em solid #00B4CC;
-        /*color: #FEFEFE;*/
-        padding: 2em 1em 7em;
+        padding: 2em 0 0;
     }
+        .panel--wedding {
+            border-left: none;
+        }
         .panel_title {
+            border-bottom: 1px solid #343838;
             font-family: 'Dancing Script', cursive;
-            font-size: 1.5em;
+            font-size: 1.75em;
             font-weight: bold;
+            margin-bottom: 0.5em;
+            padding-left: 0.25em;
+        }
+        .panel_image {
+            width: 100%;
         }
         .panel_list {
             font-size: 1.2em;
@@ -333,8 +352,9 @@ p {
     .ctaBtn--panel {
         position: absolute;
         bottom: 1em;
-        right: 2em;
-        background: #00B4CC;
+        right: 1em;
+        background: #343838;
+        opacity: 0.9;
     }
         .ctaBtn--panel i[class^="fa fa-"] {
             margin-left: 0.5em;
@@ -499,6 +519,10 @@ p {
     .panel {
         flex-basis: 100%;
         margin-top: 1em;
+    }
+    .contact_description {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
