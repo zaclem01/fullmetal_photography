@@ -15,6 +15,7 @@ $(document).ready(function() {
     });
 
     $(window).on('resize', function() {
+        window.scrollTo(0, 0);
         navOffset = $navbar.offset().top;
         if ($(this).width() >= 1024) {
             $navbar.css('display', 'flex');

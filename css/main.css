@@ -217,7 +217,7 @@ p {
 .about {
     border-left: 15vw solid #00B4CC;
     margin-top: -6em;
-    padding: 5em 15vw 7em 2em;
+    padding: 5em 2em 7em 2em;
 }
     .about h1 {
         text-align: center;
@@ -236,7 +236,7 @@ p {
         }
 
 .pricing {
-    padding: 2em 0 4em;
+    padding: 4em 0;
 }
     .pricing_title {
         display: inline-block;
@@ -250,11 +250,10 @@ p {
         display: flex;
         align-items: stretch; 
         flex-wrap: wrap;
-        justify-content: space-around;
     }
     .panel {
         position: relative;
-        flex: 0 1 24.5%;
+        flex: 0 1 25%;
         border-left: 0.2em solid #00B4CC;
         padding: 2em 0 0;
     }
@@ -262,11 +261,9 @@ p {
             border-left: none;
         }
         .panel_title {
-            border-bottom: 1px solid #343838;
             font-family: 'Dancing Script', cursive;
             font-size: 1.75em;
             font-weight: bold;
-            margin-bottom: 0.5em;
             padding-left: 0.25em;
         }
         .panel_image {
@@ -351,8 +348,8 @@ p {
 }
     .ctaBtn--panel {
         position: absolute;
-        bottom: 1em;
-        right: 1em;
+        bottom: 0;
+        right: 0;
         background: #343838;
         opacity: 0.9;
     }
@@ -487,6 +484,7 @@ p {
     .pricing {
         flex-wrap: wrap;
     }
+
     .panel {
         flex-basis: 49%;
         margin-top: 1em;
@@ -509,26 +507,41 @@ p {
     body {
         font-size: 14px;
     }
+
     .banner {
         background-position: -228px center;
         height: 65vh;
     }
+
     .about {
         padding: 2em 1em;
     }
+
     .miniGallery_image {
         flex-basis: 100%;
     }
+
     .panel {
         flex-basis: 100%;
         margin-top: 1em;
+    }
+        .panel_title {
+            font-size: 2.5em
+        }
+
+    .contact_form {
+        padding: 1em;
     }
     .contact_description {
         padding-left: 0;
         padding-right: 0;
     }
+
     .ctaBtn--about {
         float: none;
+    }
+    .ctaBtn--panel {
+        font-size: 2em;
     }
 }
 
