@@ -513,6 +513,9 @@ p {
         background-position: -228px center;
         height: 65vh;
     }
+    .about {
+        padding: 2em 1em;
+    }
     .miniGallery_image {
         flex-basis: 100%;
     }
@@ -526,7 +529,6 @@ p {
     }
     .ctaBtn--about {
         float: none;
-        font-size: 1em;
     }
 }
 
