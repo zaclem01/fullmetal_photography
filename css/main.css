@@ -526,6 +526,7 @@ p {
     }
     .ctaBtn--about {
         float: none;
+        font-size: 1em;
     }
 }
 
