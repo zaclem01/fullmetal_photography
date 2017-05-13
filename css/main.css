@@ -167,6 +167,10 @@ p {
             font-size: 2.5em;
             text-align: center;
         }
+            .banner_overlay_img h1 {
+                font-size: 2em;
+                font-weight: normal;
+            }
 
 .navigationBar {
     display: flex;
@@ -178,7 +182,7 @@ p {
     height: 6em;
     justify-content: space-around;
     margin: 0 10%;
-    top: -3em;
+    top: -6em;
     width: 80%;
     z-index: 2
 }
@@ -207,20 +211,32 @@ p {
         padding: 0 0.5em;
     }
         .navigationBar_navLink:hover {
-            border-bottom: 8px solid #008C9E;
+            border-bottom: 8px solid #00B4CC;
         }
         .navigationBar_navLink a {
             color: #FEFEFE;
             text-decoration: none;
         }
 
-.about {
-    border-left: 15vw solid #00B4CC;
-    margin-top: -6em;
-    padding: 5em 2em 7em 2em;
+.section {
+    border-left: 10em solid #00B4CC;
+    padding: 0 2em 4em 2em;
 }
-    .about h1 {
-        text-align: center;
+    .section--about {
+        margin-top: -6em;
+    }
+    .section_title {
+        display: inline-block;
+        background: #343838;
+        color: #fefefe;
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+        font-weight: normal;
+        margin: 0.5em 0 ;
+        padding: 0.3em 0.3em 0.3em 0.75em;
+    }
+    .section_header {
+        font-size: 2em;
     }
 
 .miniGallery {
@@ -235,72 +251,59 @@ p {
             width: 100%;
         }
 
-.pricing {
-    padding: 4em 0;
+.panel_wrapper {
+    display: flex;
+    align-items: stretch; 
+    flex-wrap: wrap;
 }
-    .pricing_title {
-        display: inline-block;
-        background: #343838;
-        color: #FEFEFE;
+.panel {
+    position: relative;
+    flex: 0 1 25%;
+    border-left: 0.2em solid #00B4CC;
+    padding: 1em 0 0;
+}
+    .panel--wedding {
+        border-left: none;
+    }
+    .panel_title {
         font-family: 'Dancing Script', cursive;
-        font-size: 4em;
-        padding: 0 0.25em;
+        font-size: 1.75em;
+        font-weight: bold;
+        padding-left: 0.25em;
     }
-    .panel_wrapper {
-        display: flex;
-        align-items: stretch; 
-        flex-wrap: wrap;
+    .panel_image {
+        width: 100%;
     }
-    .panel {
-        position: relative;
-        flex: 0 1 25%;
-        border-left: 0.2em solid #00B4CC;
-        padding: 2em 0 0;
+    .panel_list {
+        font-size: 1.2em;
+        list-style: none;
+        padding: 0;
     }
-        .panel--wedding {
-            border-left: none;
+        .panel_list li {
+            margin-top: 0.5rem;
+            padding-left: 0.5em;
         }
-        .panel_title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.75em;
-            font-weight: bold;
-            padding-left: 0.25em;
+        .panel_list li:before {
+            content: "\f030";
+            color: #343838;
+            display: inline-block;
+            font-family: FontAwesome;
+            margin-right: 0.5em;
         }
-        .panel_image {
-            width: 100%;
-        }
-        .panel_list {
-            font-size: 1.2em;
-            list-style: none;
-            padding: 0;
-        }
-            .panel_list li {
-                margin-top: 0.5rem;
-                padding-left: 0.5em;
-            }
-            .panel_list li:before {
-                content: "\f030";
-                color: #343838;
-                display: inline-block;
-                font-family: FontAwesome;
-                margin-right: 0.5em;
-            }
 
 .contact {
     display: flex;
+    align-content: top;
     justify-content: space-between;
-    background: #00B4CC;
-    overflow: hidden;
 }
     .contact_form {
         position: relative;
-        top: 1.5em;
         flex: 0 1 47%;
         background: #FEFEFE;
-        /*box-shadow: 0px -3px 10px #777;*/
         border-radius: 2px;
-        margin-left: 15vh;
+        margin-top: 1.5em;
         padding: 3em 4em 2em;
+        width: 50%;
     }
         .contact_form_label {
             display: block;
@@ -321,14 +324,8 @@ p {
             max-height: 20em;
             min-height: 10em;
         }
-    .contact_description {
-        flex: 0 1 50%;
-        background: #00B4CC;
-        color: #FEFEFE;
-        padding: 3em 5em 1em;
-    }
-        .contact_description h1 {
-            margin-top: 0;
+        .contact_desc {
+            flex: 0 1 50%;
         }
 
 .footer {
@@ -358,7 +355,6 @@ p {
         }
     .ctaBtn--about {
         background: #343838;
-        float: right;
         font-size: 1.5em;
         margin-top: 1em;
     }
@@ -472,9 +468,8 @@ p {
             margin: 0 auto;
         }
 
-    .about {
+    .section {
         margin-top: 0;
-        padding-top: 1em;
     }
 
     .miniGallery_image {
@@ -498,7 +493,7 @@ p {
             flex-basis: 90%;
             margin-left: 0;
         }
-        .contact_description {
+        .contact_desc {
             flex-basis: 90%;
         }
 }
@@ -513,8 +508,8 @@ p {
         height: 65vh;
     }
 
-    .about {
-        padding: 2em 1em;
+    .section {
+        padding: 1em;
     }
 
     .miniGallery_image {
@@ -532,7 +527,7 @@ p {
     .contact_form {
         padding: 1em;
     }
-    .contact_description {
+    .contact_desc {
         padding-left: 0;
         padding-right: 0;
     }
