@@ -182,7 +182,7 @@ p {
     height: 6em;
     justify-content: space-around;
     margin: 0 10%;
-    top: -6em;
+    top: -8em;
     width: 80%;
     z-index: 2
 }
@@ -233,6 +233,7 @@ p {
         font-size: 3em;
         font-weight: normal;
         margin: 0.5em 0 ;
+        opacity: 0.9;
         padding: 0.3em 0.3em 0.3em 0.75em;
     }
     .section_header {
@@ -260,16 +261,20 @@ p {
     position: relative;
     flex: 0 1 25%;
     border-left: 0.2em solid #00B4CC;
-    padding: 1em 0 0;
 }
     .panel--wedding {
         border-left: none;
     }
     .panel_title {
+        position: absolute;
+        top: 0.5em;
+        background: #343838;
+        color: #FEFEFE;
         font-family: 'Dancing Script', cursive;
         font-size: 1.75em;
-        font-weight: bold;
-        padding-left: 0.25em;
+        opacity: 0.9;
+        padding: 0.5em;
+        width: 90%;
     }
     .panel_image {
         width: 100%;
@@ -345,10 +350,10 @@ p {
 }
     .ctaBtn--panel {
         position: absolute;
-        bottom: 0;
+        bottom: 1em;
         right: 0;
         background: #343838;
-        opacity: 0.9;
+        padding: 1em;
     }
         .ctaBtn--panel i[class^="fa fa-"] {
             margin-left: 0.5em;
