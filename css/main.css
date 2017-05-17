@@ -100,7 +100,7 @@ textarea {
 }
 body {
     background: #f3f3f3;
-    color: #343838;
+    color: #222222;
     font-family: 'EB Garamond', serif;
     overflow-x: hidden;
 }
@@ -152,6 +152,14 @@ p {
         height: 100%;
         width: 100%;
     }
+        .banner_overlay h1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            font-weight: normal;
+        }
         .banner_overlay_bg {
             background: #0a0a0a;
             height: 100%;
@@ -164,18 +172,13 @@ p {
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5em;
             text-align: center;
         }
-            .banner_overlay_img h1 {
-                font-size: 2em;
-                font-weight: normal;
-            }
 
 .navigationBar {
     display: flex;
     position: relative;
-    background: #343838; 
+    background: #111111; 
     /*box-shadow: 0 0 5px #0a0a0a;*/
     border-radius: 2px;
     color: #FEFEFE;
@@ -204,8 +207,8 @@ p {
     .navigationBar_navLink {
         display: flex;
         align-items: center;
-        border-top: 8px solid #343838;
-        border-bottom: 8px solid #343838;
+        border-top: 8px solid #111111;
+        border-bottom: 8px solid #111111;
         cursor: pointer;
         font-size: 1.5em;
         padding: 0 0.5em;
@@ -226,31 +229,40 @@ p {
         margin-top: -6em;
     }
     .section_title {
+        position: relative;
+        left: -2.5em;
         display: inline-block;
         background: #343838;
         color: #fefefe;
         font-family: 'Dancing Script', cursive;
         font-size: 3em;
         font-weight: normal;
-        margin: 0.5em 0 ;
-        opacity: 0.9;
-        padding: 0.3em 0.3em 0.3em 0.75em;
+        margin: 0.5em 0 0.2em;
+        padding: 0.3em;
     }
     .section_header {
         font-size: 2em;
     }
 
 .miniGallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    background: #FEFEFE;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    -moz-column-fill: balance;
+    -webkit-column-fill: balance;
+    column-fill: balance;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    padding: 3em 1em;
 }
     .miniGallery_image {
-        flex: 1 1 33%;
+        display: block;
+        border-radius: 8px;
+        margin: 0 0 1em;
+        width: 100%
     }
-        .miniGallery_image img {
-            width: 100%;
-        }
 
 .panel_wrapper {
     display: flex;
@@ -267,12 +279,11 @@ p {
     }
     .panel_title {
         position: absolute;
-        top: 0.5em;
+        top: 0.4em;
         background: #343838;
         color: #FEFEFE;
         font-family: 'Dancing Script', cursive;
         font-size: 1.75em;
-        opacity: 0.9;
         padding: 0.5em;
         width: 90%;
     }
@@ -342,24 +353,23 @@ p {
 }
 
 .ctaBtn {
+    background: #111111;
     border: none;
-    border-radius: 2px;
+    border-left: 1em solid #00B4CC;
+    border-radius: 2px; 
     color: #FEFEFE;
     font-size: 1.1em;
-    padding: 0.5em 1em;
+    padding: 1em;
 }
     .ctaBtn--panel {
         position: absolute;
         bottom: 1em;
         right: 0;
-        background: #343838;
-        padding: 1em;
     }
         .ctaBtn--panel i[class^="fa fa-"] {
             margin-left: 0.5em;
         }
     .ctaBtn--about {
-        background: #343838;
         font-size: 1.5em;
         margin-top: 1em;
     }
@@ -477,8 +487,10 @@ p {
         margin-top: 0;
     }
 
-    .miniGallery_image {
-        flex-basis: 50%;
+    .miniGallery {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
     }
 
     .pricing {
@@ -495,11 +507,11 @@ p {
         justify-content: space-around;
     }
         .contact_form {
-            flex-basis: 90%;
+            flex-basis: 100%;
             margin-left: 0;
         }
         .contact_desc {
-            flex-basis: 90%;
+            flex-basis: 100%;
         }
 }
 
@@ -512,13 +524,24 @@ p {
         background-position: -228px center;
         height: 65vh;
     }
+        .banner_overlay {
+            display: none;
+        }
 
     .section {
+        border-left-width: 3em;
         padding: 1em;
     }
+        .section_title {
+            font-size: 2.2em;
+            left: -1em;
+            text-align: center;
+        }
 
-    .miniGallery_image {
-        flex-basis: 100%;
+    .miniGallery {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
     }
 
     .panel {
@@ -526,7 +549,7 @@ p {
         margin-top: 1em;
     }
         .panel_title {
-            font-size: 2.5em
+            width: 70%;
         }
 
     .contact_form {
@@ -539,9 +562,10 @@ p {
 
     .ctaBtn--about {
         float: none;
+        font-size: 1.2em;
     }
     .ctaBtn--panel {
-        font-size: 2em;
+        font-size: 1.2em;
     }
 }
 
