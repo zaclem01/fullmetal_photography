@@ -15,13 +15,14 @@ $(document).ready(function() {
     });
 
     $(window).on('resize', function() {
-        window.scrollTo(0, 0);
+        $navbar.toggleClass('navigationBar--fixed', false);
         navOffset = $navbar.offset().top;
         if ($(this).width() >= 1024) {
             $navbar.css('display', 'flex');
         } else {
             $navbar.css('display', 'none');
         }
+        $(window).scroll();
     });
 
     $menu.on('click', function(e) {
