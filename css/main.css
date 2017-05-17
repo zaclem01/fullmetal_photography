@@ -223,7 +223,7 @@ p {
 
 .section {
     border-left: 10em solid #00B4CC;
-    padding: 0 2em 4em 2em;
+    padding: 4em 2em;
 }
     .section--about {
         margin-top: -6em;
@@ -237,7 +237,7 @@ p {
         font-family: 'Dancing Script', cursive;
         font-size: 3em;
         font-weight: normal;
-        margin: 0.5em 0 0.2em;
+        margin: 0 0 0.2em;
         padding: 0.3em;
     }
     .section_header {
