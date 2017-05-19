@@ -44,7 +44,7 @@ $(document).ready(function() {
         if (section == '#about' || section == '#packages' || section == '#contact') {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: $(section).offset().top
+                scrollTop: $(section).offset().top - 160
             });
         }
     });
