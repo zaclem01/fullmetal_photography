@@ -105,7 +105,7 @@ body {
     overflow-x: hidden;
 }
 h1 {
-    font-size: 2em;
+    font-size: 4em;
 }
 h2 {
     font-size: 1.8em;
@@ -137,12 +137,24 @@ p {
 
 .banner {
     background-attachment: fixed;
-    background-image: url("../img/banner_photo_family.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
 }
+    .banner--home {
+        background-image: url("../img/banner_photo_home.jpg");
+    }
+    .banner--wedding {
+        background-image: url("../img/banner_photo_wedding.jpg");
+    }
+    .banner_title {
+        display: inline-block;
+        background: #fefefe;
+        border-left: 1em solid #00b4cc;
+        opacity: 0.9;
+        padding: 0.25em 1em;
+    }
     .banner_overlay {
         position: relative;
         color: #FEFEFE;
@@ -254,6 +266,9 @@ p {
     background: #FEFEFE;
     padding: 3em 1em;
 }
+    .pricing--wedding {
+        padding: 3em;
+    }
     .panel_wrapper {
         display: flex;
         align-items: stretch; 
@@ -266,6 +281,9 @@ p {
         border-radius: 8px;
         box-shadow: 3px 3px 10px #666;
     }
+        .panel--wedding {
+            flex: 0 1 30%;
+        }
         .panel_title {
             position: absolute;
             background: #262626;
@@ -276,6 +294,12 @@ p {
             padding: 0.3em;
             width: 90%;
         }
+            .panel_title--packages {
+                position: static;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 0;
+                width: 100%;
+            }
         .panel_image {
             border-radius: 8px;
             height: 100%;
@@ -287,6 +311,7 @@ p {
             padding: 0;
         }
             .panel_list li {
+                line-height: 2;
                 margin-top: 0.5rem;
                 padding-left: 0.5em;
             }
@@ -551,7 +576,9 @@ p {
         -webkit-column-count: 2;
         column-count: 2;
     }
-
+    .pricing--wedding {
+        padding: 3em 1em;
+    }
     .panel {
         flex-basis: 100%;
         margin-top: 1em;
