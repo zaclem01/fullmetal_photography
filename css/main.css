@@ -218,12 +218,13 @@ p {
     .section_title {
         position: relative;
         display: inline-block;
+        background: #FEFEFE;
         border-left: 0.7em solid #00B4CC;
         border-radius: 2px;
         font-size: 2.5em;
         font-weight: normal;
         margin: 0 0 0.2em;
-        padding: 0.3em;
+        padding: 0.3em 0.5em 0.2em;
     }
     .section_header {
         font-size: 2em;
@@ -340,11 +341,24 @@ p {
 .ctaBtn {
     background: #262626;
     border: none;
+    border-color: #00B4CC;
     border-radius: 4px; 
     color: #FEFEFE;
     font-size: 1.1em;
     padding: 0.5em;
+    transition: border-right 0.5s ease-in-out, border-left 0.5s ease-in-out;
 }
+    .ctaBtn:hover {
+        border-right: 1em solid #00B4CC;
+    }   
+    .ctaBtn--about {
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+        .ctaBtn--about:hover {
+            border-left: 1em solid #00B4CC;
+            border-right: none;
+        } 
     .ctaBtn--panel {
         position: absolute;
         bottom: 1em;
@@ -353,9 +367,10 @@ p {
         border-bottom-right-radius: 0;
         padding: 0.7em;
     }
-    .ctaBtn--about {
+    .ctaBtn--contact {
         font-size: 1.5em;
-        margin-top: 1em;
+        padding: 0.25em 1em;
+        float: right;
     }
     .ctaBtn i[class^="fa fa-"] {
         margin-left: 0.5em;
@@ -498,6 +513,10 @@ p {
             flex-basis: 100%;
         }
 }
+
+/* ==========================================================================
+   Small Screen Media Queries
+   ========================================================================== */
 
 @media only screen and (max-width: 720px) {
     body {
