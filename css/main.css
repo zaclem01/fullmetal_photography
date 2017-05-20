@@ -152,6 +152,7 @@ p {
         display: inline-block;
         background: #fefefe;
         border-left: 1em solid #00b4cc;
+        margin-top: 0;
         opacity: 0.9;
         padding: 0.25em 1em;
     }
