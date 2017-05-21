@@ -41,7 +41,7 @@ $(document).ready(function() {
 
         var section = $(this).find('a').attr('href');
         console.log(section);
-        if (section == '#about' || section == '#packages' || section == '#contact') {
+        if (section == '#about' || section == '#contact') {
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: $(section).offset().top - 160
