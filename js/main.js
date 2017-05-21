@@ -34,13 +34,11 @@ $(document).ready(function() {
         e.stopPropagation();
         var width = $(window).width();
         var smallRes = width <= 1007;
+        var section = $(this).find('a').attr('href');
 
-        if (smallRes) {
+        if (smallRes && !$(this).hasClass('js-keepOpen')) {
             $navbar.css('display', 'none');
         }
-
-        var section = $(this).find('a').attr('href');
-        console.log(section);
         if (section == '#about' || section == '#contact') {
             e.preventDefault();
             $('html, body').animate({
