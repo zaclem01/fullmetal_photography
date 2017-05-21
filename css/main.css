@@ -404,6 +404,7 @@ p {
     color: #FEFEFE;
     font-size: 1.1em;
     padding: 0.5em;
+    text-decoration: none;
     transition: border-right 0.5s ease-in-out, border-left 0.5s ease-in-out;
 }
     .ctaBtn:hover {
