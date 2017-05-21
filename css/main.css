@@ -100,7 +100,6 @@ textarea {
 }
 body {
     background: #f3f3f3;
-    color: #222222;
     font-family: 'Josefin Slab', serif;
     overflow-x: hidden;
 }
@@ -113,7 +112,7 @@ h2 {
     font-size: 1.8em;
 }
 p {
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 /*
