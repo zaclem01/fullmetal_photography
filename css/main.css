@@ -288,15 +288,15 @@ p {
     -moz-column-fill: balance;
     -webkit-column-fill: balance;
     column-fill: balance;
-    -moz-column-gap: 1em;
-    -webkit-column-gap: 1em;
-    column-gap: 1em;
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
     padding: 3em 1em;
 }
     .miniGallery_image {
         display: block;
         border-radius: 4px;
-        margin: 0 0 1em;
+        margin: 0 0 2em;
         width: 100%
     }
 
