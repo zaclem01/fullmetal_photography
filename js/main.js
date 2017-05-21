@@ -63,9 +63,4 @@ $(document).ready(function() {
     $('.ctaBtn--about').on('click', function() {
         $('#Setmore_button_iframe').click();
     });
-
-    setTimeout(function() {
-        $('.banner_overlay').removeClass('fadeInLeft');
-        $('.banner_overlay').addClass('fadeOutRight');
-    }, 2000)
 });

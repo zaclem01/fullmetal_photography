@@ -118,7 +118,22 @@ p {
 /*
  * Home Page
  */
-
+.topbar {
+    display: none;
+    justify-content: space-between;
+    background: #FEFEFE;
+    padding: 0.3em 1.5em 0.3em 1em;
+    z-index: 2;
+}
+    .topbar_menuIcon {
+        display: none;
+        cursor: pointer;
+        font-size: 2em;
+    }
+    .topbar_branding {
+        float: right;
+        font-size: 2em;
+    }
 .banner {
     background-attachment: fixed;
     background-position: center;
@@ -133,14 +148,14 @@ p {
     .banner--wedding {
         background-image: url("../img/banner_photo_wedding.jpg");
     }
-    .banner_title {
+    /*.banner_title {
         display: inline-block;
         background: #fefefe;
         border-left: 1em solid #00b4cc;
         margin-top: 0;
         opacity: 0.9;
         padding: 0.25em 1em;
-    }
+    }*/
     .banner_overlay {
         position: relative;
         color: #FEFEFE;
@@ -155,7 +170,7 @@ p {
             border: 0.1em solid #FEFEFE;
             border-radius: 4px;
             font-size: 3em;
-            padding-left: 0.3em;
+            padding: 0 0.3em;
         }
             /*.banner_overlay h1 span {
                 display: inline-block;
@@ -540,6 +555,7 @@ p {
 
 @media only screen and (max-width: 1024px) {
     .topbar {
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -553,7 +569,7 @@ p {
         display: none;
         flex-flow: column;
         position: fixed;
-        top: 3.4em;
+        top: 2.5em;
         box-shadow: none;
         height: auto;
         margin: 0;
@@ -615,13 +631,13 @@ p {
         font-size: 13px;
     }
 
-    .banner {
+    .banner--home {
         background-position: -228px center;
         height: 65vh;
         margin-top: 47px;
     }
-        .banner_overlay {
-            display: none;
+        .banner_overlay h1 {
+            width: 70%;
         }
 
     .section {
