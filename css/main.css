@@ -101,45 +101,31 @@ textarea {
 body {
     background: #f3f3f3;
     color: #222222;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Josefin Slab', serif;
     overflow-x: hidden;
 }
 h1 {
-    font-size: 4em;
+    font-family: 'Meera Inimai', sans-serif;
+    font-size: 3em;
 }
 h2 {
+    font-family: 'Meera Inimai', sans-serif;
     font-size: 1.8em;
 }
 p {
-    font-size: 1.6em;
+    font-size: 1.1em;
 }
 
 /*
  * Home Page
  */
 
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    background: #FEFEFE;
-    padding: 0.3em 1.5em 0.3em 1em;
-    z-index: 2;
-}
-    .topbar_menuIcon {
-        display: none;
-        cursor: pointer;
-        font-size: 2em;
-    }
-    .topbar_branding {
-        float: right;
-        font-size: 2em;
-    }
-
 .banner {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Meera Inimai', sans-serif;
     height: 80vh;
 }
     .banner--home {
@@ -164,16 +150,24 @@ p {
     }
         .banner_overlay h1 {
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            border: 0.1em solid #FEFEFE;
+            border-radius: 4px;
             font-size: 3em;
-            font-weight: normal;
+            padding-left: 0.3em;
         }
+            /*.banner_overlay h1 span {
+                display: inline-block;
+                background: #262626;
+                height: 100%;
+                padding: 0 0.3em;
+            }*/
         .banner_overlay_bg {
             background: #262626;
             height: 100%;
-            opacity: 0.9;
+            opacity: 0.5;
             width: 100%;
         }
         .banner_overlay_img {
@@ -188,7 +182,9 @@ p {
     display: flex;
     background: #262626; 
     color: #FEFEFE;
-    height: 5em;
+    font-family: 'Meera Inimai', sans-serif;
+    font-size: 1.3em;
+    height: 2.5em;
     justify-content: space-around;
     top: 54px;
     z-index: 2
@@ -215,7 +211,6 @@ p {
         border-top: 8px solid #262626;
         border-bottom: 8px solid #262626;
         cursor: pointer;
-        font-size: 1.5em;
         padding: 0 0.5em;
     }
         .navigationBar_navLink:hover {
@@ -235,7 +230,7 @@ p {
     .navigationBar_dropdown {
         display: none;
         position: absolute;
-        top: 75%;
+        top: 64%;
         left: 0;
         background: #262626;
         border-top: 0.5em solid #00B4CC;
@@ -261,7 +256,8 @@ p {
         background: #FEFEFE;
         border-left: 0.7em solid #00B4CC;
         border-radius: 2px;
-        font-size: 2.5em;
+        font-family: 'Meera Inimai', sans-serif;
+        font-size: 2em;
         font-weight: normal;
         margin: 0 0 0.2em;
         padding: 0.3em 0.5em 0.2em;
@@ -285,7 +281,7 @@ p {
 }
     .miniGallery_image {
         display: block;
-        border-radius: 8px;
+        border-radius: 4px;
         margin: 0 0 1em;
         width: 100%
     }
@@ -306,31 +302,58 @@ p {
     .panel {
         position: relative;
         flex: 0 1 23%;
-        border-radius: 8px;
+        border-radius: 4px;
         box-shadow: 3px 3px 10px #666;
+        overflow: hidden;
     }
         .panel--wedding {
             flex: 0 1 30%;
         }
-        .panel_title {
-            position: absolute;
-            background: #262626;
-            border-top-left-radius: 8px;
-            border-bottom-right-radius: 4px;
-            color: #FEFEFE;
-            font-size: 1.6em;
-            padding: 0.3em;
-            width: 90%;
+        .panel:hover .panel_overlay,
+        .panel:hover .panel_category {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-            .panel_title--packages {
-                position: static;
-                border-top-right-radius: 8px;
-                border-bottom-right-radius: 0;
-                width: 100%;
-            }
+        .panel:hover .ctaBtn--panel {
+            opacity: 1;
+            right: 0;
+        }
+        .panel_overlay {
+            position: absolute;
+            top: 2.56em;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #262626;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            opacity: 0.4;
+        }
+        .panel_title {
+            background: #262626;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            color: #FEFEFE;
+            font-family: 'Meera Inimai', sans-serif;
+            font-size: 1.3em;
+            padding: 0.3em;
+        }
+        .panel_category {
+            position: absolute;
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 0.1em solid #FEFEFE;
+            border-radius: 4px;
+            color: #FEFEFE;
+            font-family: 'Meera Inimai', sans-serif;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 0 0.3em;
+        }
         .panel_image {
-            border-radius: 8px;
-            height: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
             width: 100%;
         }
         .panel_list {
@@ -402,6 +425,7 @@ p {
     border-color: #00B4CC;
     border-radius: 4px; 
     color: #FEFEFE;
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 1.1em;
     padding: 0.5em;
     text-decoration: none;
@@ -411,7 +435,6 @@ p {
         border-right: 1em solid #00B4CC;
     }   
     .ctaBtn--about {
-        font-size: 1.5em;
         margin-top: 1em;
     }
         .ctaBtn--about:hover {
@@ -421,13 +444,16 @@ p {
     .ctaBtn--panel {
         position: absolute;
         bottom: 1em;
-        right: 0;
+        right: -100%;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        padding: 0.7em;
+        font-size: 1em;
+        transition: opacity 0.5s ease-in-out, 
+            right 0.5s ease-in-out, 
+            border-right 0.5s ease-in-out, 
+            border-left 0.5s ease-in-out;
     }
     .ctaBtn--contact {
-        font-size: 1.5em;
         padding: 0.25em 1em;
         float: right;
     }
@@ -620,9 +646,6 @@ p {
         flex-basis: 100%;
         margin-top: 1em;
     }
-        .panel_title {
-            width: 70%;
-        }
 
     .contact_form {
         padding: 1em;
