@@ -244,11 +244,12 @@ p {
     .navigationBar_dropdown {
         display: none;
         position: absolute;
-        top: 64%;
+        top: 48px;
         left: 0;
         background: #262626;
         border-top: 0.5em solid #00B4CC;
         list-style: none;
+        margin: 0;
         padding: 0.5em 1.5em;
         z-index: 2;
     }
@@ -317,7 +318,7 @@ p {
         position: relative;
         flex: 0 1 23%;
         border-radius: 4px;
-        box-shadow: 3px 3px 10px #666;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
         .panel--wedding {
@@ -373,7 +374,7 @@ p {
         .panel_list {
             font-size: 1.2em;
             list-style: none;
-            padding: 0;
+            padding: 0 0.5em;
         }
             .panel_list li {
                 line-height: 2;
@@ -398,7 +399,6 @@ p {
         flex: 0 1 57%;
         background: #FEFEFE;
         border-radius: 2px;
-        margin-top: 1.5em;
         padding: 3em 4em 2em;
         width: 50%;
     }
@@ -441,7 +441,7 @@ p {
     color: #FEFEFE;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 1.1em;
-    padding: 0.5em;
+    padding: 0.7em;
     text-decoration: none;
     transition: border-right 0.5s ease-in-out, border-left 0.5s ease-in-out;
 }
@@ -468,7 +468,7 @@ p {
             border-left 0.5s ease-in-out;
     }
     .ctaBtn--contact {
-        padding: 0.25em 1em;
+        padding: 0.5em 1em;
         float: right;
     }
     .ctaBtn i[class^="fa fa-"] {
@@ -570,7 +570,6 @@ p {
         flex-flow: column;
         position: fixed;
         top: 2.5em;
-        box-shadow: none;
         height: auto;
         margin: 0;
         width: 100%;
@@ -646,7 +645,6 @@ p {
     }
         .section_title {
             font-size: 2em;
-            text-align: center;
         }
 
     .miniGallery {

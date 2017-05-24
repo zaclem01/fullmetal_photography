@@ -36,13 +36,12 @@ $(document).ready(function() {
         var smallRes = width <= 1007;
         var section = $(this).find('a').attr('href');
 
-        console.log($(this).hasClass('js-keepOpen'));
-
         if (smallRes) {
             $(this).hasClass('js-keepOpen') ? 
-                $navbar.css('display', 'none') :
-                $(this).hover();
+                $(this).hover() :
+                $navbar.css('display', 'none');
         }
+
         if (section == '#about' || section == '#contact') {
             e.preventDefault();
             $('html, body').animate({
