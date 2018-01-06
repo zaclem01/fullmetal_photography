@@ -146,7 +146,10 @@ p {
         background-image: url("../img/banner_photo_home.jpg");
     }
     .banner--wedding {
-        background-image: url("../img/banner_photo_wedding.jpg");
+        background-image: url("../img/weddings/banner_photo_wedding.jpg");
+    }
+    .banner--family {
+        background-image: url("../img/family/banner-family.jpg");
     }
     /*.banner_title {
         display: inline-block;
