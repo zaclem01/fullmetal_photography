@@ -140,7 +140,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Meera Inimai', sans-serif;
-    height: 80vh;
+    height: 50vh;
 }
     .banner--home {
         background-image: url("../img/banner_photo_home.jpg");
@@ -280,6 +280,24 @@ p {
     .section_header {
         font-size: 2em;
     }
+    .section_list {
+        font-size: 1.5em;
+        font-weight: bold;
+        list-style: none;
+    }
+        .section_list li {
+            line-height: 2;
+        }
+            .section_list li:before {
+                content: "\f030";
+                color: #262626;
+                display: inline-block;
+                font-family: FontAwesome;
+                margin-right: 0.5em;
+            }
+    .section p {
+        font-size: 1.5em;
+    }
 
 .miniGallery {
     background: #FEFEFE;
@@ -321,6 +339,9 @@ p {
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
+        .panel:hover {
+            cursor: pointer;
+        }
         .panel--wedding {
             flex: 0 1 30%;
         }
@@ -440,7 +461,7 @@ p {
     border-radius: 4px; 
     color: #FEFEFE;
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     padding: 0.7em;
     text-decoration: none;
     transition: border-right 0.5s ease-in-out, border-left 0.5s ease-in-out;
@@ -632,7 +653,6 @@ p {
 
     .banner--home {
         background-position: -228px center;
-        height: 65vh;
         margin-top: 47px;
     }
         .banner_overlay h1 {
@@ -658,6 +678,7 @@ p {
     .panel {
         flex-basis: 100%;
         margin-top: 1em;
+        max-height: 20rem;
     }
 
     .contact_form {
