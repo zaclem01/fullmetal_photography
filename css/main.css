@@ -151,6 +151,9 @@ p {
     .banner--family {
         background-image: url("../img/family/banner-family.jpg");
     }
+    .banner--other {
+        background-image: url("../img/other/banner-other.jpg");
+    }
     /*.banner_title {
         display: inline-block;
         background: #fefefe;
