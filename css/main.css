@@ -322,6 +322,7 @@ p {
         display: block;
         border-radius: 4px;
         margin: 0 0 2em;
+        pointer-events: none;
         width: 100%
     }
 
