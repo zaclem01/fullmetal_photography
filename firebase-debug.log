@@ -1,0 +1,26 @@
+[debug] [2018-01-19T02:43:17.347Z] ----------------------------------------------------------------------
+[debug] [2018-01-19T02:43:17.350Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zac\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-01-19T02:43:17.350Z] CLI Version:   3.17.1
+[debug] [2018-01-19T02:43:17.350Z] Platform:      win32
+[debug] [2018-01-19T02:43:17.350Z] Node Version:  v8.9.4
+[debug] [2018-01-19T02:43:17.351Z] Time:          Thu Jan 18 2018 21:43:17 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-19T02:43:17.351Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-19T02:43:17.364Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-19T02:43:17.364Z] > authorizing via signed-in user
+[debug] [2018-01-19T02:43:17.366Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/louisvillefmphotography  
+  
+ Thu Jan 18 2018 21:43:17 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-19T02:43:18.072Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-19T02:43:18.074Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/louisvillefmphotography/tokens  
+  
+ Thu Jan 18 2018 21:43:18 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-19T02:43:18.610Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'louisvillefmphotography'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing / directory for upload...
+[debug] [2018-01-19T02:43:21.250Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/louisvillefmphotography/uploads/-L3BI7F6G_mwkst42TPL?fileCount=286&message=  
+  
+ Thu Jan 18 2018 21:43:21 GMT-0500 (Eastern Standard Time)
